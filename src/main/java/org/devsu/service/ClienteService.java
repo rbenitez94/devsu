@@ -6,9 +6,11 @@ import org.devsu.DTO.CuentaResponse;
 import org.devsu.DTO.Response;
 import org.devsu.exception.DevsuError;
 import org.devsu.models.Cliente;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface ClienteService {
 
     List<ClienteResponse> getAll() throws DevsuError;

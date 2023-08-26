@@ -2,21 +2,22 @@ package org.devsu.service;
 
 import org.devsu.DTO.CuentaRequest;
 import org.devsu.DTO.CuentaResponse;
-import org.devsu.DTO.Response;
 import org.devsu.exception.DevsuError;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface CuentaService {
 
-    public List<CuentaResponse> getAll() throws DevsuError;
+    List<CuentaResponse> getAll() throws DevsuError;
 
-    public CuentaResponse getById(long id) throws DevsuError;
+    CuentaResponse getById(long id) throws DevsuError;
 
-    public CuentaResponse crear(CuentaRequest request) throws DevsuError;
+    CuentaResponse crear(CuentaRequest request) throws DevsuError;
 
-    public CuentaResponse editar(CuentaRequest request) throws DevsuError;
+    CuentaResponse editar(CuentaRequest request) throws DevsuError;
 
-    public CuentaResponse eliminar(long id) throws DevsuError;
+    CuentaResponse eliminar(long id) throws DevsuError;
 
 }
